@@ -1,21 +1,20 @@
-# tsRFun
-a comprehensive platform for decoding tsRNA expression, functions and prognosis value by highthroughput small RNA-Seq and CLIP-Seq data
-# Requirements
+# tsRFun: a comprehensive platform for decoding tsRNA expression, functions and prognosis value by highthroughput small RNA-Seq and CLIP-Seq data
+## Requirements
 Linux system, enough disk space and Ram depending on the size of RNA deep sequencing data. (Tested system: ubuntu 12.04 LTS,
 ubuntu 16.04 LTS)
 
-# install conda
+## install conda
 wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh
 bash Miniconda3-py39_4.10.3-Linux-x86_64.sh
 source ~/.bashrc
 
-# configure the environment with conda
+## configure the environment with conda
 conda env create -f tsRFun.yaml
 
-# activate conda environment
+## activate conda environment
 conda activate tsRFun
 
-# test if everything is installed properly:
+## test if everything is installed properly:
 perl -v
 tsRFinder.pl -h
 bowtie
@@ -41,15 +40,15 @@ Others:
   -v		Print version information
   -h		Print this usage message
 
-# Example of use:
+## Example of use:
 tsRFinder.pl -i PATH_of_example/fasta -o PATH_of_example/ -x hg38_index/
 
-# If you have these errors,please refer to the following:
-# error1
+### If you have these errors,please refer to the following:
+#### error1
 perl: symbol lookup error: perl5/x86_64-linux-thread-multi//auto/Math/CDF/CDF.so: undefined symbol: Perl_Gthr_key_ptr
-# Solution1
+#### Solution1
 export PERL5LIB=""
-# error2
+#### error2
 samtools: error while loading shared libraries: libtinfow.so.5: cannot open shared object file: No such file or directory
-# Solution2
+#### Solution2
 conda install -c conda-forge ncurses
