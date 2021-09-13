@@ -32,6 +32,7 @@ tsRFinder.pl
 
 The input files are:
 Options:
+
   -i <file>	Input could be: .fastq/.fq or .fasta/.fa file. 
   
   -o <file>	Output address of annotation results.
@@ -42,6 +43,7 @@ Options:
   
 
 Alignment:
+  
   -l <int>	The minimal length of the output sequences (default = 15)
   
   -L <int>	The maximal length of the output sequences (default = 45)
